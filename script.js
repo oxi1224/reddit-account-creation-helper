@@ -24,6 +24,6 @@
   document.getElementById("regPassword").setAttribute('data-empty', 'false');
   console.log(`
   login: ${login}
-  haslo: ${password}
+  haslo: ${document.getElementById("regPassword").value}
   `);
 })();
