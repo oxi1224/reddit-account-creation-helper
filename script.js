@@ -22,5 +22,9 @@
   document.getElementById("regUsername").setAttribute('data-empty', 'false');
   document.getElementById("regPassword").value = password;
   document.getElementById("regPassword").setAttribute('data-empty', 'false');
-  document.getElementsByClassName('SignupButton')[0].addEventListener("click", () => {console.log(`login: ${login}\nhaslo: ${document.getElementById("regPassword").value}`)} );
+  document.getElementsByClassName('SignupButton')[0].addEventListener("click", async () => {
+    console.log(`login: ${login}\nhaslo: ${document.getElementById("regPassword").value}`);
+    await new Promise(r => setTimeout(r, 500));
+    document.getElementsByClassName('SubscribeButton')[0].click();
+  });
 })();
