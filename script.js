@@ -22,8 +22,5 @@
   document.getElementById("regUsername").setAttribute('data-empty', 'false');
   document.getElementById("regPassword").value = password;
   document.getElementById("regPassword").setAttribute('data-empty', 'false');
-  console.log(`
-  login: ${login}
-  haslo: ${document.getElementById("regPassword").value}
-  `);
+  document.getElementsByClassName('SignupButton')[0].addEventListener("click", () => {console.log(`login: ${login}\nhaslo: ${document.getElementById("regPassword").value}`)} );
 })();
